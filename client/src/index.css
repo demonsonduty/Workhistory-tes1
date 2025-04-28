@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  
+  /* Sulzer Blue */ 
+  --primary: 207 74% 21%;
+  --primary-foreground: 211 100% 99%;
+  
+  --secondary: 60 4.8% 95.9%;
+  --secondary-foreground: 24 9.8% 10%;
+  --accent: 60 4.8% 95.9%;
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+  
+  /* Chart Colors */
+  --chart-1: 210 75% 22%;
+  --chart-2: 4 79% 63%;
+  --chart-3: 145 63% 49%;
+  --chart-4: 42 78% 61%;
+  --chart-5: 229 54% 70%;
+  
+  /* Custom Colors */
+  --sulzer-blue: 207 74% 21%;
+  --sulzer-light-blue: 204 70% 53%;
+  --sulzer-danger: 4 79% 63%;
+  --sulzer-warning: 37 90% 51%;
+  --sulzer-success: 145 63% 49%;
+  --sulzer-gray: 184 9% 62%;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 207 74% 21%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-gray-50 text-foreground;
+    font-family: 'Open Sans', sans-serif;
+  }
+}
+
+/* Card animation */
+.card-transition {
+  @apply transition-transform transition-shadow duration-200;
+}
+
+.card-transition:hover {
+  @apply transform -translate-y-0.5 shadow-md;
+}
+
+/* Tab transitions */
+.tab-transition {
+  @apply transition-colors duration-300;
+}
+
+/* Chart container */
+.chart-container {
+  position: relative;
+  height: 300px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .chart-container {
+    height: 250px;
+  }
+}
+
+/* Custom Colors */
+.text-sulzer-blue {
+  @apply text-[#0a3d62];
+}
+
+.bg-sulzer-blue {
+  @apply bg-[#0a3d62];
+}
+
+.text-sulzer-light {
+  @apply text-[#3498db];
+}
+
+.bg-sulzer-light {
+  @apply bg-[#3498db];
+}
+
+.text-sulzer-danger {
+  @apply text-[#e74c3c];
+}
+
+.bg-sulzer-danger {
+  @apply bg-[#e74c3c];
+}
+
+.text-sulzer-warning {
+  @apply text-[#f39c12];
+}
+
+.bg-sulzer-warning {
+  @apply bg-[#f39c12];
+}
+
+.text-sulzer-success {
+  @apply text-[#2ecc71];
+}
+
+.bg-sulzer-success {
+  @apply bg-[#2ecc71];
+}
+
+.text-sulzer-gray {
+  @apply text-[#95a5a6];
+}
+
+.bg-sulzer-gray {
+  @apply bg-[#95a5a6];
+}
